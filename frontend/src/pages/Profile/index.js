@@ -51,7 +51,7 @@ export default function Profile() {
         }
       });
       //varre o array de incidents e seta novamente no estado
-      setIncidents(incidents.filter(caso => caso.id != id));
+      setIncidents(incidents.filter(caso => caso.id !== id));
 
     }catch{
       alert("Erro ao deletar, tente novamente");
