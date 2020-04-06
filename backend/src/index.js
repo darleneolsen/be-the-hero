@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
+const {errors} = require('celebrate');
+
 const app = express();
+
 
 /*importa a rota para dentro do arquivo quando é um arquivo 
 utilizar ./ - ./ mesma pasta do arquivo, voltar para anterior ../
@@ -12,7 +15,7 @@ const routes = require('./routes')
 app.use(cors());
 app.use(express.json());
 app.use(routes);
-
+app.use(errors());
  
 /*criando a rota
 Métodos HTPP
